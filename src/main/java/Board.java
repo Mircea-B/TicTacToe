@@ -1,4 +1,6 @@
+
 public class Board {
+
   public enum Mark {
 
     MARK_X {
@@ -55,8 +57,45 @@ public class Board {
     }
   }
 
+  public Mark getWinner() {
 
-  public boolean isGameover
+    Mark result=Mark.MARK_EMPTY;
+    for (int i = 0; i < 3; ++i) {
+      for (int j = 0; j < 3; ++j) {
+        if (table[0][j] == Mark.MARK_0 && table[1][j] == Mark.MARK_0 && table[2][j] == Mark.MARK_0) {
+          result=Mark.MARK_0;
+        }
+        if (table[i][0] == Mark.MARK_0 && table[i][1] == Mark.MARK_0 && table[i][2] == Mark.MARK_0) {
+          result=Mark.MARK_0;
+        }
+        if (table[0][j] == Mark.MARK_0 && table[1][j] == Mark.MARK_0 && table[2][j] == Mark.MARK_0) {
+          result=Mark.MARK_0;
+        }
+
+        if (table[0][j] == Mark.MARK_X && table[1][j] == Mark.MARK_X && table[2][j] == Mark.MARK_X) {
+          result=Mark.MARK_X;
+        }
+        if (table[0][j] == Mark.MARK_X && table[1][j] == Mark.MARK_X && table[2][j] == Mark.MARK_X) {
+          result=Mark.MARK_X;
+        }
+        if (table[0][j] == Mark.MARK_X && table[1][j] == Mark.MARK_X && table[2][j] == Mark.MARK_X) {
+          result=Mark.MARK_X;
+        }
+
+      }
+
+    }
+    System.out.println(result);
+    return result;
+  }
+
+
+  public boolean isGameover() {
+    if (true) {
+
+    }
+    return false;
+  }
 }
 
 
