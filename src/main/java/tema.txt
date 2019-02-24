@@ -1,0 +1,60 @@
+interfata (se numesc cu adjectiv)
+Readable
+o singura metoda: public int[] getCoord();
+
+===========================================
+
+
+
+===========================================
+clasa Board: gestionarea tablei de joc
+Campuri (adica variabila la nivel de clasa):
+	• tabla, matrice de 3x3 de tip enum
+    •
+Metode (actiuni)
+	•  Constructor: inceperea jocului cu tabla goala (9 spatii asezate)
+	•  move: completeaza matricea (adica tabla) cu un anumit simbol la o anumita pozitie
+    •  isGameOver: returneaza true daca jocul s-a terminat, false altfel
+
+========================================================================
+
+clasa Player:  sa muta dupa o strategie proprie, dar cu simbolul lui
+Campuri (adica variabile la nivel de clasa)
+	• nume
+	• simbol
+Metode (actiuni)
+    • Constructor: primeste numele si simbolul ca parametru
+    • getSimbol
+
+========================================================================
+clasa abstracta Arbitru: este responsabil de desfasurarea jocului si implementeaza interfata Readable fara a codul din metoda getCoord;:
+Campuri (adica variabile la nivel de clasa)
+    • Board
+    • Player 1
+    • Player 2
+    • boolean xTurn
+Metode(actiuni):
+	• Constructor: va crea o tabla noua si doi jucatori fiecare cu un nume propriu, dar cu un simbol ales de arbitru
+    • continuaJoc pentru fie un anumit player, fie altul, dupa regulile jocului
+    • anunta starea de sfarsit a jocului
+
+=========================================================================
+
+clasa TicTacToe console:
+Campuri:
+    • Scanner
+Metode (actiuni):
+    • constructor: creaza scanner pentru citire de la tastatura si creaza arbitru mentionand numele celor doi jucatori.
+    • startjoc
+
+===================================================================
+clasa despretest TicTacToe unit test: extinde arbitru
+==========================================================================
+Clasa main: are public static void main si ea doar incepe joc, adica apeleaza tictactoi.startJoc
+
+
+metoda getCoord din consola
+- de citit de la tastatura coordonatele unuei mutari
+
+metoda start din arbitru
+-while treue apeleaza getcoord pt a pobtine date la care sa se faca mjutare , dupa care apeleaza metoda move pe tabla
