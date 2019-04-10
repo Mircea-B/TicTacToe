@@ -59,28 +59,26 @@ public class Board {
 
   public Mark getWinner(int col, int row, Mark simbol) {
 
-    Mark result=Mark.MARK_EMPTY;
+    Mark result = Mark.MARK_EMPTY;
     {
-              if (table[0][row] == Mark.MARK_0 && table[1][row] == Mark.MARK_0 && table[2][row] == Mark.MARK_0) {
-          result=Mark.MARK_0;
-        }
-        if (table[col][0] == Mark.MARK_0 && table[col][1] == Mark.MARK_0 && table[col][2] == Mark.MARK_0) {
-          result=Mark.MARK_0;
-        }
-        if (table[0][1] == Mark.MARK_0 && table[1][1] == Mark.MARK_0 && table[2][2] == Mark.MARK_0) {
-          result=Mark.MARK_0;
-        }
+      if (table[0][row] == Mark.MARK_0 && table[1][row] == Mark.MARK_0 && table[2][row] == Mark.MARK_0) {
+        result = Mark.MARK_0;
+      }
+      if (table[col][0] == Mark.MARK_0 && table[col][1] == Mark.MARK_0 && table[col][2] == Mark.MARK_0) {
+        result = Mark.MARK_0;
+      }
+      if (table[0][1] == Mark.MARK_0 && table[1][1] == Mark.MARK_0 && table[2][2] == Mark.MARK_0) {
+        result = Mark.MARK_0;
+      }
 
-        if (table[0][0] == Mark.MARK_X && table[1][1] == Mark.MARK_X && table[2][0] == Mark.MARK_X) {
-          result=Mark.MARK_X;
-        }
-        if (table[0][j] == Mark.MARK_X && table[1][j] == Mark.MARK_X && table[2][j] == Mark.MARK_X) {
-          result=Mark.MARK_X;
-        }
-        if (table[0][j] == Mark.MARK_X && table[1][j] == Mark.MARK_X && table[2][j] == Mark.MARK_X) {
-          result=Mark.MARK_X;
-        }
-
+      if (table[0][0] == Mark.MARK_X && table[1][1] == Mark.MARK_X && table[2][0] == Mark.MARK_X) {
+        result = Mark.MARK_X;
+      }
+      if (table[0][row] == Mark.MARK_X && table[1][row] == Mark.MARK_X && table[2][row] == Mark.MARK_X) {
+        result = Mark.MARK_X;
+      }
+      if (table[0][row] == Mark.MARK_X && table[1][row] == Mark.MARK_X && table[2][row] == Mark.MARK_X) {
+        result = Mark.MARK_X;
       }
 
     }
